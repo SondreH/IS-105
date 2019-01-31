@@ -2,7 +2,11 @@ package main
 
 import ("fmt")
 
+func minFunk (x int, y String) int, String {
+	return x + y
+}
+
 func main(){
-	fmt.Println("Hei, bloggæn!")
+	minFunk(12, "Ayyyyy")
 }
 
