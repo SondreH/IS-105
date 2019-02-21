@@ -1,9 +1,9 @@
-package main
+﻿package main
 
 import (
 	"fmt"
 
-	slice "./slice"
+	"./slice"
 )
 
 func main() {
