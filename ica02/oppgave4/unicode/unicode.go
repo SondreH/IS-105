@@ -3,7 +3,7 @@ package unicode
 import (
   "fmt"
 )
-// Kode for Oppgave 4a
+// Check which language and return either japanese, icelandic or alien
 func Translate(expression string, language string) string {
   if language == "is" {
     return "\xE2\x80\x9C\x6E\x6F\x72\xC3\xB0\x75\x72\x20\x6F\x67\x20\x73\x75\xC3\xB0\x75\x72\xE2\x80\x9D\n"
@@ -14,7 +14,7 @@ func Translate(expression string, language string) string {
 	return "alien language"
 }
 
-// Kode for Oppgave 4b
+// Haven't done this task yet.
 func UnicodeCodePointDemo() {
 	// Hva er dette?
 	// Er det likt på MS Windows og macOS?
