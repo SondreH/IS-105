@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"./unicode"
+	"github.com/karlosmartines/karls-windows/IS-105/ica02/oppgave4_unicode/unicode"
 )
 // Print result from unicode.Translate
 func main() {
