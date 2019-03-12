@@ -1,8 +1,9 @@
 package main
 
-/*import "./fileutils"*/
+import (
+	Fileutils "./fileutils"
+)
 
 func main() {
-	fileutils.fileToByteslice(text)
-	//iso.GreetingExtASCII(iso.GreetASCII)
+	Fileutils.FileToByteslice("text.txt")
 }

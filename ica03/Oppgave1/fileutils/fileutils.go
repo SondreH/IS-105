@@ -1,13 +1,14 @@
-package fileutils
+package Fileutils
 
 import (
+	"fmt"
 	"io"
 	"log"
 	"os"
 )
 
-func fileToByteslice(filename string) []byte {
-
+/*FileToByteSlice : The input is the name of the file, output is the slice itself.*/
+func FileToByteslice(filename string) []byte {
 	// Open file for reading
 	file, err := os.Open(filename)
 
@@ -18,19 +19,22 @@ func fileToByteslice(filename string) []byte {
 	if err != nil {
 		log.Fatal(err)
 	}
-	size_of_slice := finfo.Size()
+	sizeOfSlice := finfo.Size()
 
 	// The file.Read() function can read a
 	// tiny file into a large byte slice,
 	// but io.ReadFull() will return an
 	// error if the file is smaller than
 	// the byte slice
-	byteSlice := make([]byte, size_of_slice)
+	byteSlice := make([]byte, sizeOfSlice)
 
 	_, err = io.ReadFull(file, byteSlice)
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	fmt.Println("sizeOfSlice")
+
 	return byteSlice
 
 }
