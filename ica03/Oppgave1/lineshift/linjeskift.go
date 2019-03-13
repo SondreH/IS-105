@@ -23,8 +23,7 @@ func Lineshift(etArray []byte) {
 	if strings.TrimSpace(siste) == "D" {
 		/*https://en.wikipedia.org/wiki/Newline
 		TrimSpace fjerner alt av whitespacing for så å sjekke om
-		A tilsvarer å bevege seg en linje forover (LF, Line feed),
-		hvorav D tilsvarer linjeskift (CR, Carriage Return).
+		D tilsvarer linjeskift (CR, Carriage Return).
 		Hvis siste linje har linjeskift printes beskjeden*/
 		fmt.Println("Det er med linjeskift.")
 	} else {
