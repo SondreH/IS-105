@@ -1,6 +1,7 @@
-package Fileutils
+package fileutils
 
 import (
+	"IS-105/ica03/Oppgave1/lineshift"
 	"fmt"
 	"io"
 	"log"
@@ -33,7 +34,10 @@ func FileToByteslice(filename string) []byte {
 		log.Fatal(err)
 	}
 
-	fmt.Println("sizeOfSlice")
+	fmt.Printf("%c", byteSlice)
+	fmt.Println("")
+
+	lineshift.Lineshift(byteSlice)
 
 	return byteSlice
 
