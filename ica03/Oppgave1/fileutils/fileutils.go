@@ -9,9 +9,9 @@ import (
 )
 
 /*FileToByteSlice : The input is the name of the file, output is the slice itself.*/
-func FileToByteslice(filename string) []byte {
+func FileToByteslice(filnavn string) []byte {
 	// Open file for reading
-	file, err := os.Open(filename)
+	file, err := os.Open(filnavn)
 
 	if err != nil {
 		log.Fatal(err)

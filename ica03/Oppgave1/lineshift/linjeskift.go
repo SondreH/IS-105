@@ -10,7 +10,7 @@ func Lineshift(etArray []byte) {
 	//Sjekke lengden på arrayet og flytte indeksen 2 plasser tilbake
 	arrLinjeNestSist := etArray[i]
 	siste := fmt.Sprintf("% X\n", arrLinjeNestSist) //For å sjekke om
-	/*det nestsiste symbolet har 0D eller 0A/annet.
+	/*det nestsiste ASCII-symbolet har 0D eller 0A/annet.
 	(https://en.wikipedia.org/wiki/Newline
 	TrimSpace fjerner alt av whitespacing for så å sjekke om
 	A tilsvarer å bevege seg en linje forover (LF, Line feed),
@@ -21,8 +21,7 @@ func Lineshift(etArray []byte) {
 	//printer UTF-8 symbolene for hver av tegnene.
 
 	if strings.TrimSpace(siste) == "D" {
-		/*https://en.wikipedia.org/wiki/Newline
-		TrimSpace fjerner alt av whitespacing for så å sjekke om
+		/*TrimSpace fjerner alt av whitespacing for så å sjekke om
 		D tilsvarer linjeskift (CR, Carriage Return).
 		Hvis siste linje har linjeskift printes beskjeden*/
 		fmt.Println("Det er med linjeskift.")
