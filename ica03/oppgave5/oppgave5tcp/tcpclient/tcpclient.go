@@ -16,5 +16,5 @@ func Dial() {
 	defer conn.Close()
 
 	bs, _ := ioutil.ReadAll(conn)
-	fmt.Println(bs)
+	fmt.Println(string(bs))
 }
