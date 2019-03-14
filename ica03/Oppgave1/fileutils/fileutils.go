@@ -1,11 +1,12 @@
 package fileutils
 
 import (
-	"IS-105/ica03/Oppgave1/lineshift"
 	"fmt"
 	"io"
 	"log"
 	"os"
+
+	"github.com/Shammers95/IS-105/ica03/Oppgave1/lineshift"
 )
 
 /*FileToByteSlice : The input is the name of the file, output is the slice itself.*/
