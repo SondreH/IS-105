@@ -13,8 +13,8 @@ type Email struct {
 // EncodeJSON encodes JSON
 func EncodeJSON() []byte {
 	email := Email{
-		Name:  "Karl Martin Lund",
-		Email: "lund.karlmartin@gmail.com",
+		Name:  "Sondre Hammersbøen",
+		Email: "sondreh@live.no",
 	}
 
 	var buf []byte
