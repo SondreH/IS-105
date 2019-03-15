@@ -1,3 +1,4 @@
+// Package tcpclient dials at an adress and displays the result
 package tcpclient
 
 import (
@@ -5,8 +6,7 @@ import (
 	"io/ioutil"
 	"net"
 )
-
-// Dial dials
+// Dial dials at the given adress and prints out a string of the result
 func Dial() {
 	fmt.Println("TCP dialed")
 	conn, err := net.Dial("tcp", ":5000")
