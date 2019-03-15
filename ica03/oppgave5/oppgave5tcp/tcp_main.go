@@ -1,3 +1,5 @@
+// Package main in this program starts a TCP-server which serves a JSON-structure
+// and then starts a client to dial at the same adress to get the JSON-structure.
 package main
 
 import (
