@@ -1,4 +1,4 @@
-Package tcpclient dials at an adress and displays the result
+// Package tcpclient dials at an adress and displays the result
 package tcpclient
 
 import (

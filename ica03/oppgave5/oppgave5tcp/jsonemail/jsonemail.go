@@ -1,12 +1,12 @@
+package jsonemail
 // Package jsonemail has a struct for a name and an email and a method to fill
 // the fields of that structure and encodes it to a JSON stucture
-package jsonemail
 
 import (
 	"encoding/json"
 )
 
-// Email is a struct that can contain name and email
+// Email is a struct that can contains fields for name and email
 type Email struct {
 	Name  string
 	Email string
