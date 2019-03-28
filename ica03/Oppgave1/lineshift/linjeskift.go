@@ -30,7 +30,7 @@ func Lineshift(etArray []byte) {
 		D tilsvarer linjeskift (CR, Carriage Return). Dersom den tilsvarer A inneholder den en ny linje (LF, Linefeed)*/
 		fmt.Println("Det er med linjeskift (CR, Carriage Return).")
 	} else if (strings.TrimSpace(siste) == "A" || strings.TrimSpace(nestSiste) == "A") && (strings.TrimSpace(siste) != "D" || strings.TrimSpace(nestSiste) != "D") {
-		fmt.Println("Dette er med Linefeed (LF) uten CR")
+		fmt.Println("Dette er med linefeed (LF) uten CR")
 	} else {
 		fmt.Println("Dette er i et annet format enn CR / LF.")
 	}
