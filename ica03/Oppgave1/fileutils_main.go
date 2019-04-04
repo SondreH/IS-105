@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/shammers95/IS-105/ica03/Oppgave1/fileutils"
+	"github.com/SondreH/IS-105/ica03/Oppgave1/fileutils"
 )
 
 func main() {

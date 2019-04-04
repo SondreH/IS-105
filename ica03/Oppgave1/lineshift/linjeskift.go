@@ -15,11 +15,19 @@ func Lineshift(etArray []byte) {
 	siste := fmt.Sprintf("%X\n", arrLinjeSist) //For å sjekke om
 	/*det nestsiste og siste ASCII-symbolet har 0D eller 0A, eller annet.
 	(https://en.wikipedia.org/wiki/Newline */
-	fmt.Print("ASCII-representasjon: ")
+	//var minTekst = fmt.Printf("%X\n", etArray)
 	fmt.Printf("%X\n", etArray) //Enklere å dobbelsjekke & teste,
 	//printer ASCII symbolene for hver av tegnene.
 	fmt.Println("Trimspace returnerer for nestsiste linje:", strings.TrimSpace(nestSiste))
 	fmt.Println("Trimspace returnerer for siste linje:", strings.TrimSpace(siste))
+
+	/*if strings.Contains(minTekst, "A") {
+		fmt.Println("Dette er A")
+	} else if strings.Contains(minTekst, "D") {
+		fmt.Println("Dette er D")
+	} else {
+		fmt.Println("Dette er noe annet")
+	}*/
 
 	/*TrimSpace fjerner alt av whitespacing for så å sjekke om
 	A tilsvarer å bevege seg en linje forover (LF, Line feed),
