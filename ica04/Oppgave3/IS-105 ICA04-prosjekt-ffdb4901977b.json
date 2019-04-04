@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "is-105-ica04-prosjekt",
+  "private_key_id": "ffdb4901977bc08490ab580e93be771c7a0a2529",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDzwMEijsZfFl6g\nwQ8jGvJm7GLM7a/t3Udv1w11f/8pZiGRvfqPByPF3TlJd0eAhYd+bzSo2rZxK51a\nqrrYvgfz3qGQiQm96sT8An8MhhWHhRQQA7mlfLhfjRGu4xAR1CPCytxcchlcK/pa\nyvNkzYt79a+ObDkop3yPBVN3RhGtRToBKa5oxYdoSGQUjNIHghA2m+yYglSafp1m\nOr891w9Y+jWIroQFir6jbajt/9kxv+NR4gCjMvi7ROMpZj1I32wcVb0VvqdGzzd4\np/YasPMRJsj0XPqynvrosoDPtqrumrwBubwQqUVFbzMDPfN1jBXZd6s6i0Sn9Y78\nXM/8zlh7AgMBAAECgf8mZzgGjyKx2H8QKgU4grEDhjq1ZBKpEd6EwF0JJiFiubSQ\nQbONf+fNmg0XMLO94UvM9Q2sN3PcYK1p8NF/VHFBpXx5nnLqeRKP9yoNJGg/8beM\nzl7Gs9+t2OFFrICGTpCpH/eX7mIQeN1OG1Y9i3oZDZxF1ByCoItUp9d+neDVwMOr\nDObzqRutbhNSpBvow6g4eOWdivk2wop7SuO64q9i2Kb5fWzp8dSAT4KVCphjX8SI\n+yCBErA8frzod/muUAG6zj7sx40GRny+tCUGoIkoJbeCooSX79ppWArTYkhWutBA\nK5W3tkfrhzz8846DHYmaLRyPBGvwrHXQAapXGvkCgYEA/F5RD4j7aTND3g0WsC6c\nPLB2KPdC5kC7MY0C9S1xO1SsqSsuAiaWsPDvx6Pwz9F/aw2OYrAc0i/cosXDQA5K\n/3HmXzNkjv+PK8eKSRwFDB/xNXd9Sj3tXq2XaCvH+71cPorJkcWQoSsq66T4Zx3D\nsrdeScTIzfwF2InH7WW+Gr0CgYEA90KzJkPjIEr9oPyRAtmzr6cteyO+3ek1HAjR\n/tA9HFesgux3nwsmVwhXucWAKIAujgAahbaT3sNd1ikzmNduNWOxG+ROnLIjaKdw\n45qREIMWpHiGposx8uD+09x3hIXLRpSpRoJWAWnCN2WH6JtzcZ6gfIf7tmm+oFH/\n3kYBj5cCgYEAz/MftD9ZepwFhkkestoVX2TAWI02EOix1uis0T46mXryMwsjhB4r\n+WzvB4AtA/FKnvmyo9seRIuvsGhotLWSUt6Vx0hfyf0HCjoH1qpB9nWzmiz1jmFs\n4KEFq4634NVt1xMheP5kaIlbeoSbMsyx3ud9yCdgl2rdnkoZ9aHqfbkCgYEAxZRt\n9YjP6JEkBM1tzvpJhHYxeLHCpi7hOoqty1F5U7mXZ3Mvz04oj+lhuFfipfpvuRbK\nGskfdiVlSWnZCiwzq8QC1YflbX9HniwWoDl169zkbf7FkjWubydtWbxVYPdMzRSk\nA2zI7w4knQGrzarSYBtioMBE2qm7Iv8DWAlW2/cCgYEAv/TJOZUMk1Jxepn1Ea1H\n0HR//ya5BTRv2tOd2/Xu5NeYpttLzJLUTSVJLouq9KxeDOTdk3vqxMZmnRK8PFQF\nENo0weFFFBWVm1/DRWUkaiHk8CXFCUWySYdC1RDsAXzNS+vYGmVkmfGWdXejtyCe\nTwUGz40wAooJHrTm5xyTcwE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "sondres-is105-ica04@is-105-ica04-prosjekt.iam.gserviceaccount.com",
+  "client_id": "105046293149779311096",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sondres-is105-ica04%40is-105-ica04-prosjekt.iam.gserviceaccount.com"
+}
