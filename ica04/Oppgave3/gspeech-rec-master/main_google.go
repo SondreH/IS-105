@@ -22,7 +22,7 @@ func main() {
 	}
 
 	// Sets the name of the audio file to transcribe.
-	filename := "./testdata/SondreOgTarIS105.wav"
+	filename := "./testdata/AndreasOgTarIS105.wav"
 
 	// Reads the audio file into memory.
 	data, err := ioutil.ReadFile(filename)
