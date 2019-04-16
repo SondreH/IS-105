@@ -38,15 +38,15 @@ func redirect(w http.ResponseWriter, r *http.Request) {
 	values := r.URL.Query()
 	text := values.Get("text")
 	sprok := values.Get("sprok")
+	pitch := values.Get("pitch")
+	speed := values.Get("speed")
+
+
 	if sprok == "Norsk" {
-		http.Redirect(w, r, "http://0.0.0.0:8080/speech?text="+text+"&voice=no", 301)
-
-	} else if sprok == "Engelsk" {
-		http.Redirect(w, r, "http://0.0.0.0:8080/speech?text=" + text + "&voice=en", 301)
-}	  else if sprok == "Russisk" {
-		http.Redirect(w, r, "http://0.0.0.0:8080/speech?text=" + text + "&voice=sr", 301)
+		http.Redirect(w, r, "http://0.0.0.0:8080/speech?text="+text+"&voice=no&pitch="+pitch+"&speed="+speed, 301)
+		} else if sprok == "Engelsk" {
+		http.Redirect(w, r, "http://0.0.0.0:8080/speech?text="+text+"&voice=en&pitch="+pitch+"&speed="+speed, 301)
+		} else if sprok == "Russisk" {
+		http.Redirect(w, r, "http://0.0.0.0:8080/speech?text="+text+"&voice=sr&pitch="+pitch+"&speed="+speed, 301)
 	}
-
-
-
 }
