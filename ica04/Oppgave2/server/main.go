@@ -21,14 +21,14 @@ func main() {
 func foo(w http.ResponseWriter, r *http.Request) {
 
 
-	fp3 := path.Join("html","index.html")
-	tmpl3, err := template.ParseFiles(fp3)
+	side := path.Join("html","index.html")
+	html, err := template.ParseFiles(side)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 
-	if err := tmpl3.Execute(w, w); err != nil {
+	if err := html.Execute(w, w); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
 }
