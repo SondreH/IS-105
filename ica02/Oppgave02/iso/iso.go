@@ -28,7 +28,6 @@ func GetExtendedASCIIStringLiteral() string {
 
 func IterateOverExtendedASCIIStringLiteral(sl string) {
 	// Kode for Oppgave 2a
-
 	for i := 0; i < len(sl); i++ {
 		fmt.Printf("%X %c %b \n", sl[i], sl[i], sl[i])
 	}
@@ -37,7 +36,7 @@ func IterateOverExtendedASCIIStringLiteral(sl string) {
 // GreetingExtendedASCII returnerer en tekst-streng i
 // utvidet ASCII
 // Kode for Oppgave 2c
-func GreetingExtASCII(sl string) string {
+func GreetingExtendedASCII(sl string) string {
 	//Greetings
 
 	for i := 0; i < len(sl); i++ {

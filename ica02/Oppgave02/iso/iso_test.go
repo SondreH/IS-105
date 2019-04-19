@@ -3,19 +3,19 @@ package iso
 import (
 	"fmt"
 	"testing"
+	"unicode"
 )
 
 func Test_greetingExtendedASCII(t *testing.T) {
 	//Greetings
-	sl := GetExtendedASCIIStringLiteral()
-	var erDetASCII = true
+	//sl := GetExtendedASCIIStringLiteral()
+	sl := "\x84\x86\x41"
 	for _, i := range sl {
-		if i < 127 {
-			erDetASCII = false
+		if i > unicode.MaxASCII {
+			fmt.Println("Dette er ASCII.")
+		} else {
+			fmt.Println("Dette er ikke ASCII.")
+			t.Fail()
 		}
-	}
-	if erDetASCII == false {
-		fmt.Println("Dette er ikke ASCII.")
-		t.Fail()
 	}
 }
