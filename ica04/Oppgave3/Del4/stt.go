@@ -46,7 +46,7 @@ func main() {
 		log.Fatal("Failed getting the response", responseErr)
 	}
 
-	result := speechToText.GetCreateJobResult(response)
+	result := speechToText.GetRecognizeResult(response)
 	b, err := json.MarshalIndent(result, "", "  ")
 	// Dette er bare en test jeg la til fordi jeg ikke forstår hvor null kommer.
 	if err != nil {
