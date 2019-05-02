@@ -39,7 +39,8 @@ func main() {
 		log.Println(err)
 	}
 
-	fmt.Println("Din tale betyr: ", jsonUt.SpeakingText)
+	//Printer kun ut tekst, ettersom returnen fra ai.wit er uten confidence
+	fmt.Println("Det mest sannsynlige din tale betyr:", jsonUt.SpeakingText)
 
 	//testing
 	/*data := verdier.(map[string]interface{})
