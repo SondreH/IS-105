@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"./unicode"
+	"./unicode/unicode"
 )
 // Print result from unicode.Translate
 func main() {
