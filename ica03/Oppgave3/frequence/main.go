@@ -12,7 +12,7 @@ import (
 //Path på linje 67 må endres til din lokale path.
 
 //Basert på https://stackoverflow.com/questions/5884154/read-text-file-into-string-array-and-write
-func skrivFil(lines [11]int, path string) error {
+func skrivFil(lines [5]int, path string) error {
 	file, err := os.Create(path)
 	if err != nil {
 		return err
@@ -29,7 +29,7 @@ func skrivFil(lines [11]int, path string) error {
 func main() {
 	//Array med 256 plasser for hvert ASCII-symbol
 	var a256 [256]int
-	var a11 [11]int
+	var a5 [5]int
 	//Leser fila, setter teksten inn i en array
 	filText, err := ioutil.ReadFile(os.Args[1])
 	if err != nil {
@@ -62,7 +62,7 @@ func main() {
 		fmt.Print(". Rune: ")
 		fmt.Printf("%q", tegn) //Hvilken rune
 		fmt.Println(", Counts: ", antll)
-		a11[i+1] = antll //For å skrive top 5 til ny fil. Plass 0 står ubrukt, kan gjøres til a10, men enklere å lese.
+		a5[i] = antll //For å skrive top 5 til ny fil. Plass 0 står ubrukt, kan gjøres til a10, men enklere å lese.
 		a256[tegn] = 0
 	}
 	antFiler, _ := ioutil.ReadDir("C:/Users/Sondre/go/src/github.com/SondreH/IS-105/ica03/Oppgave3/frequence") //MÅ BYTTE TIL DIN PATH.
@@ -72,7 +72,7 @@ func main() {
 	//(blir et '♦'-tegn ved vanlig parsing, altså hvis: pathNummer := string(len(antFiler)))
 	fmt.Println("Antall filer i mappen:", pathNummer)
 	//En ulempe er et kan skape skape problemer etter sletting av filer ved mange opprettinger.
-	skrivFil(a11, "noe"+pathNummer+".txt")
+	skrivFil(a5, "noe"+pathNummer+".txt")
 	fmt.Print("Navnet til filen er: 'noe", pathNummer, ".txt'\n")
 }
 
