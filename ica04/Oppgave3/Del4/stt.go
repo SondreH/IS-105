@@ -1,7 +1,6 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
 	"io"
 	"log"
@@ -10,6 +9,45 @@ import (
 	"github.com/IBM/go-sdk-core/core"
 	"github.com/watson-developer-cloud/go-sdk/speechtotextv1"
 )
+
+type jsonStruktur struct {
+	StatusCode int `json:"StatusCode"`
+	Headers    struct {
+		Connection            []string `json:"Connection"`
+		ContentDisposition    []string `json:"Content-Disposition"`
+		ContentLength         []string `json:"Content-Length"`
+		ContentSecurityPolicy []string `json:"Content-Security-Policy"`
+		ContentType           []string `json:"Content-Type"`
+		Date                  []string `json:"Date"`
+		SessionName           []string `json:"Session-Name"`
+		XContentTypeOptions   []string `json:"X-Content-Type-Options"`
+		XDpWatsonTranID       []string `json:"X-Dp-Watson-Tran-Id"`
+		XFrameOptions         []string `json:"X-Frame-Options"`
+		XGlobalTransactionID  []string `json:"X-Global-Transaction-Id"`
+		XXSSProtection        []string `json:"X-Xss-Protection"`
+	} `json:"Headers"`
+	Result struct {
+		Results []struct {
+			Final        bool `json:"final"`
+			Alternatives []struct {
+				Transcript string          `json:"transcript"`
+				Confidence float64         `json:"confidence"`
+				Timestamps [][]interface{} `json:"timestamps"`
+			} `json:"alternatives"`
+			WordAlternatives []struct {
+				StartTime    float64 `json:"start_time"`
+				EndTime      float64 `json:"end_time"`
+				Alternatives []struct {
+					Confidence float64 `json:"confidence"`
+					Word       string  `json:"word"`
+				} `json:"alternatives"`
+			} `json:"word_alternatives"`
+		} `json:"results"`
+		ResultIndex int `json:"result_index"`
+	} `json:"Result"`
+}
+
+var jsonUt jsonStruktur
 
 func main() {
 
@@ -35,23 +73,20 @@ func main() {
 	response, responseErr := speechToText.Recognize(
 		&speechtotextv1.RecognizeOptions{
 			Audio:                     &audioFile,
-			ContentType:               core.StringPtr(speechtotextv1.RecognizeOptions_ContentType_AudioWav),
+			ContentType:               core.StringPtr(speechtotextv1.RecognizeOptions_ContentType_AudioMp3),
 			Timestamps:                core.BoolPtr(true),
 			WordAlternativesThreshold: core.Float32Ptr(0.9),
-			Keywords:                  []string{"colorado", "tornado", "tornadoes"},
+			Keywords:                  []string{"Keyword"},
 			KeywordsThreshold:         core.Float32Ptr(0.5),
 		},
 	)
+
 	if responseErr != nil {
 		log.Fatal("Failed getting the response", responseErr)
 	}
 
-	result := speechToText.GetRecognizeResult(response)
-	b, err := json.MarshalIndent(result, "", "  ")
-	// Dette er bare en test jeg la til fordi jeg ikke forstår hvor null kommer.
-	if err != nil {
-		log.Fatal("Json error", err)
-	}
-	fmt.Println(string(b))
+	//json.Unmarshal([]byte(response.Result), jsonUt)
+	fmt.Println(response)
+	//fmt.Println(response)
 
 }
