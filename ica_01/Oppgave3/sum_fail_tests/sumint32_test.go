@@ -1,7 +1,10 @@
 package sum
 
-import "testing"
+import (
+	"testing"
 
+	sum "github.com/SondreH/IS-105/ica_01/Oppgave3/sum"
+)
 
 var sum_tests_int32 = []struct {
 	n1       int32
@@ -15,7 +18,7 @@ var sum_tests_int32 = []struct {
 
 func TestSumInt32(t *testing.T) {
 	for _, v := range sum_tests_int32 {
-		if val := SumInt32(v.n1, v.n2); val != v.expected {
+		if val := sum.SumInt32(v.n1, v.n2); val != v.expected {
 			t.Errorf("Sum(%d, %d) returned %d, expected %d", v.n1, v.n2, val, v.expected)
 		}
 	}

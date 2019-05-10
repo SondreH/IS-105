@@ -1,6 +1,10 @@
 package sum
 
-import "testing"
+import (
+	"testing"
+
+	sum "github.com/SondreH/IS-105/ica_01/Oppgave3/sum"
+)
 
 var sum_tests_int64 = []struct {
 	n1       int64
@@ -9,12 +13,12 @@ var sum_tests_int64 = []struct {
 }{
 	{1, 2, 3},
 	{4, -5, -1},
-	{126, 1, 127},
+	{12657999996666897987, 1, 127},
 }
 
 func TestSumInt64(t *testing.T) {
 	for _, v := range sum_tests_int64 {
-		if val := SumInt64(v.n1, v.n2); val != v.expected {
+		if val := sum.SumInt64(v.n1, v.n2); val != v.expected {
 			t.Errorf("Sum(%d, %d) returned %d, expected %d", v.n1, v.n2, val, v.expected)
 		}
 	}

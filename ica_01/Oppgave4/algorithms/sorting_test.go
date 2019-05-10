@@ -7,6 +7,9 @@ import (
 	"time"
 )
 
+//For å sjekke benchmarkene:
+//Go test -bench=.
+
 // https://golang.org/doc/effective_go.html#init
 func init() {
 	seed := time.Now().Unix()

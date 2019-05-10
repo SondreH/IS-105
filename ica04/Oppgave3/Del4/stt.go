@@ -73,7 +73,7 @@ func main() {
 	response, responseErr := speechToText.Recognize(
 		&speechtotextv1.RecognizeOptions{
 			Audio:                     &audioFile,
-			ContentType:               core.StringPtr(speechtotextv1.RecognizeOptions_ContentType_AudioMp3),
+			ContentType:               core.StringPtr(speechtotextv1.RecognizeOptions_ContentType_AudioWav),
 			Timestamps:                core.BoolPtr(true),
 			WordAlternativesThreshold: core.Float32Ptr(0.9),
 			Keywords:                  []string{"Keyword"},

@@ -4,14 +4,15 @@ import "fmt"
 import "os"
 import "strconv"
 import "bufio"
-import sum "github.com/SondreH/IS-105/ica_01/Oppgave3/sum_pass"
+import sum "github.com/SondreH/IS-105/ica_01/Oppgave3/sum"
 
 func main() {
-	scanner := bufio.NewScanner(os.Stdin)
+	scanner := bufio.NewScanner(os.Stdin) //For input fra cmd
 	var text string
 	var text2 string
 	fmt.Println("Skriv inn tall for å summere, skriv x for å avslutte")
 
+	//Kalkuleringen av text+text2
 	for text != "x" {
 		fmt.Print("Tall nummer 1: ")
 		scanner.Scan()
