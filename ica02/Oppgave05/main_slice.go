@@ -3,7 +3,7 @@
 import (
 	"fmt"
 
-	"./slice"
+	"github.com/SondreH/IS-105/ica02/Oppgave05/slice"
 )
 
 func main() {

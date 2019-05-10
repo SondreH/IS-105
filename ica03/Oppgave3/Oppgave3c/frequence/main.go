@@ -28,7 +28,7 @@ func skrivFil(lines [5]int, path string) error {
 
 func main() {
 	//Array med 256 plasser for hvert ASCII-symbol
-	var a256 [256]int
+	var a256 [255]int
 	var a5 [5]int
 	//Leser fila, setter teksten inn i en array
 	filText, err := ioutil.ReadFile(os.Args[1])
