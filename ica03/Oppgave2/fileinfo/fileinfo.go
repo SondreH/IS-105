@@ -1,12 +1,14 @@
 package main
 
 import (
-	"fmt"
-	"os"
-	"log"
-	"path/filepath"
 	"flag"
+	"fmt"
+	"log"
+	"os"
+	"path/filepath"
 )
+
+//For å teste: go run fileinfo.go -f test.txt
 
 func main() {
 	fileP := flag.String("f", "", "filename")

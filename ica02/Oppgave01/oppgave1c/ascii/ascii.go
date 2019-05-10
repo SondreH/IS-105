@@ -17,5 +17,4 @@ func GreetingASCII() string {
 	}
 	t2 := "\x48\x65\x6c\x6c\x6f\x20\x3a\x2d\x29"
 	return t2
-
 }

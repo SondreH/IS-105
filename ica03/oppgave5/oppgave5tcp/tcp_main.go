@@ -3,7 +3,7 @@
 package main
 
 import (
-	"github.com/shammers95/IS-105/ica03/oppgave5/oppgave5tcp/tcpserver"
+	"github.com/sondreh/IS-105/ica03/oppgave5/oppgave5tcp/tcpserver"
 )
 
 // Function main runs tcpclients Dial and tcpservers ServeTCP

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/Shammers95/IS-105/ica03/oppgave5/oppgave5tcp/jsonemail"
+	"github.com/sondreh/IS-105/ica03/oppgave5/oppgave5tcp/jsonemail"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {

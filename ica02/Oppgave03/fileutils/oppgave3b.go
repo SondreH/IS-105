@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
+
 	"./fileutils"
 )
 
 func main() {
-	
+
 	fmt.Println("lang01")
 	fileutils.FileToByteslice("../files/lang01.wl")
 

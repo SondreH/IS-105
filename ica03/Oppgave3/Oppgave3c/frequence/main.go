@@ -9,7 +9,7 @@ import (
 	"strconv"
 )
 
-//Path på linje 67 må endres til din lokale path.
+//OBS: Path på linje 67 må endres til din lokale path.
 
 //Basert på https://stackoverflow.com/questions/5884154/read-text-file-into-string-array-and-write
 func skrivFil(lines [5]int, path string) error {
@@ -65,8 +65,9 @@ func main() {
 		a5[i] = antll //For å skrive top 5 til ny fil. Plass 0 står ubrukt, kan gjøres til a10, men enklere å lese.
 		a256[tegn] = 0
 	}
-	antFiler, _ := ioutil.ReadDir("C:/Users/Sondre/go/src/github.com/SondreH/IS-105/ica03/Oppgave3/frequence") //MÅ BYTTE TIL DIN PATH.
+	antFiler, _ := ioutil.ReadDir("C:/Users/Sondre/go/src/github.com/SondreH/IS-105/ica03/Oppgave3/Oppgave3c/frequence") //MÅ BYTTE TIL DIN PATH.
 	//fmt.Println(len(antFiler)) //hvis du ønsker å se ant filer i folderen.
+	fmt.Println("Antall filer i mappen:", len(antFiler))
 	var pathNummer = strconv.Itoa(len(antFiler)) //Nummeret vil variere ut ifra antall filer totalt i mappen.
 	//Bruker strconv.Itoa for å konvertere fra int til string
 	//(blir et '♦'-tegn ved vanlig parsing, altså hvis: pathNummer := string(len(antFiler)))

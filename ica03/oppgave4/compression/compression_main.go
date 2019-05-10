@@ -60,6 +60,7 @@ func gzipEncode(data []byte) ([]byte, int) {
 	return gzipSlice, gzipLen
 }
 
+//Eksempel: go run compression_main.go ./filer/test.txt
 func main() {
 	if len(os.Args) < 2 {
 		panic("1")

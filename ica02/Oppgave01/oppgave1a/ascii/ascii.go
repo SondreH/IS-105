@@ -11,7 +11,6 @@ const ascii = "\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f"
 	"`abcdefghijklmnopqrstuvwxyz{|}~\x7f"
 
 func IterateOverASCIIStringLiteral() {
-
 	a := ascii
 	for i := 0; i < len(a); i++ {
 		fmt.Printf("%X %+q %b\n", a[i], a[i], a[i])

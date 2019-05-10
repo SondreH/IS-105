@@ -1,4 +1,5 @@
 package jsonemail
+
 // Package jsonemail has a struct for a name and an email and a method to fill
 // the fields of that structure and encodes it to a JSON stucture
 
@@ -16,8 +17,8 @@ type Email struct {
 // encodes it to a JSON-structure which it returns to the caller.
 func EncodeJSON() []byte {
 	email := Email{
-		Name:  "Karl Martin Lund",
-		Email: "lund.karlmartin@gmail.com",
+		Name:  "Sondre Hammersbøen",
+		Email: "sondreh@live.no",
 	}
 
 	var buf []byte

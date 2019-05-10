@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/shammers95/IS-105/ica03/oppgave5/oppgave5tcp/jsonemail"
+	"github.com/sondreh/IS-105/ica03/oppgave5/oppgave5tcp/jsonemail"
 )
 
 // handler is retrieving a JSON-structure and writing it to a connection

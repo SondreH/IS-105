@@ -8,7 +8,7 @@ import (
 
 func main() {
 
-	//Deklarer og allokerer 2 slicer, med kapasitet 10,30
+	//Deklarer og allokerer 2 slicer, med kapasitet 10, 30
 	var mySlice = slice.AllocateVar(10)
 	var mySlice2 = slice.AllocateMake(30)
 
