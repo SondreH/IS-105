@@ -1,3 +1,4 @@
+// Package main in compression.go is a program for compressing data to gzip format.
 package main
 
 import (
@@ -10,27 +11,25 @@ import (
 	"os"
 )
 
+// Func check checks for an error.
 func check(e error) {
 	if e != nil {
 		panic(e)
 	}
 }
 
+// Func hexEncode takes data in a slice of bytes, encodes it in hexadecimals according to the Unicode-model
+// and returns it as a slice of bytes and an integer of how many bytes it is.
 func hexEncode(data []byte) ([]byte, int) {
 	hexEncoding := make([]byte, hex.EncodedLen(len(data)))
 	len := hex.Encode(hexEncoding, data)
-
-	// fmt.Printf("Hexadecimal encoding: %s\n", hexEncoding)
-
-	// fmt.Printf("Hexadecimal encoding length: %d\n", len)
-
 	return hexEncoding, len
 }
 
-func base64Encode(data []byte /*, hexEnLen int, pWriter io.Writer*/) ([]byte, int) {
-
-	// base64Encoding := make([]byte, base64.EncodedLen(hexEnLen))
-
+// Func base64Encode take data in a slice of bytes, encodes it in base64 and returns it as a slice of bytes
+// and an integer of how many bytes it is.
+func base64Encode(data []byte) ([]byte, int) {
+	
 	asciislice := make([]byte, 0, len(data))
 	buf := bytes.NewBuffer(asciislice)
 
@@ -49,6 +48,8 @@ func base64Encode(data []byte /*, hexEnLen int, pWriter io.Writer*/) ([]byte, in
 	return b64Slice, b64EnLen
 }
 
+// Func gzipEncode takes data as a slice of bytes, encodes it in gzip-format and returns it as a slice
+// of bytes and an integer of how many bytes it is.
 func gzipEncode(data []byte) ([]byte, int) {
 	var buf bytes.Buffer
 	zw := gzip.NewWriter(&buf)
@@ -60,7 +61,9 @@ func gzipEncode(data []byte) ([]byte, int) {
 	return gzipSlice, gzipLen
 }
 
-//Eksempel: go run compression_main.go ./filer/test.txt
+// Func main takes an argument from the command line and reads the information. It then calls the above
+// encoding functions to encode it in hexadecimals, base64 and gzip and prints the results of each part
+// of the process.
 func main() {
 	if len(os.Args) < 2 {
 		panic("1")
@@ -74,7 +77,7 @@ func main() {
 	fmt.Printf("Hexadecimal encoding: %s\n", hexEncoding)
 	fmt.Printf("Hexadecimal encoding length: %d\n", hexEnLen)
 
-	b64Encoding, b64EnLen := base64Encode(data /*, hexEnLen, pWriter*/)
+	b64Encoding, b64EnLen := base64Encode(data)
 	fmt.Printf("Base64 hex encoding: %x\n", b64Encoding)
 	fmt.Printf("Base64 hex encoding length: %d\n", b64EnLen)
 
