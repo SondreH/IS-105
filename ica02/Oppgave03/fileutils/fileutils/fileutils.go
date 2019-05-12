@@ -34,14 +34,14 @@ func FileToByteslice(filename string) []byte {
 		log.Fatal(err)
 	}
 
-	fmt.Println("%c")
+	fmt.Println("Tilfeldige tegn: ")
 	fmt.Printf("%c", byteSlice)
-	
-	fmt.Println("% X \n")
+
+	fmt.Println("Islandsk: ")
 	fmt.Printf("% X \n", byteSlice)
-	
-	fmt.Println("%u")
-	fmt.Printf("%u=unicode", byteSlice)
+
+	fmt.Println("Norsk: ")
+	fmt.Printf("%c", byteSlice)
 
 	return byteSlice
 }
